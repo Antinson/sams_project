@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Employer Direct</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    </head>
+    <body>
+        <img src="/static/images/actual.jpg">
+        <br>
+        
+        <form action="#" method="post">
+            <p>Document Name</p>
+            <input type="text" name="document", required>
+            <br>
+            {% for message in get_flashed_messages()%}
+                <p> {{message}} </p>
+                <input type="text" name="{{message}}">
+            {% endfor %}
+            <br>
+            <input type="submit" value="Submit" name="submit">
+
+
+        </form>
+    </body>
+</html>

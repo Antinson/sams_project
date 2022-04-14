@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Employer Direct</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    </head>
+    <body>
+        <a href="/"><img src="/static/images/actual.jpg"></a>
+        <br>
+        <p>Please select a template below</p>
+        <br>
+
+        <div class="inner_templates">
+            <form action="templates", method="post">
+                <select name="temps">
+                    <optgroup label="Redundancies & restructure Templates">
+                        <option value="ED TEMPLATE 1 Restructure Proposal">ED TEMPLATE 1 Restructure Proposal</option>
+                        <option value="ED TEMPLATE 2 Restructure feedback form">ED TEMPLATE 2 Restructure feedback form</option>
+                        <option value="ED TEMPLATE 3 Restructure feedback reminder">ED TEMPLATE 3 Restructure feedback reminder</option>
+                        <option value="ED TEMPLATE 4 Restructure Outcome (Redundancy)">ED TEMPLATE 4 Restructure Outcome (Redundancy)</option>
+                        <option value="ED TEMPLATE 5 Restructure outcome (selection criteria)">ED TEMPLATE 5 Restructure outcome (selection criteria)</option>
+                        <option value="ED TEMPLATE 6 Redundancy Selection Matrix">ED TEMPLATE 6 Redundancy Selection Matrix</option>
+                        <option value="ED TEMPLATE 7 Confirmation of Consultation (New Role)">ED TEMPLATE 7 Confirmation of Consultation (New Role)</option>
+                        <option value="ED TEMPLATE 8 Confirmation of Consultation (Not Redundant, same role)">ED TEMPLATE 8 Confirmation of Consultation (Not Redundant, same role)</option>
+                        <option value="ED TEMPLATE 9 Confirmation of Consultation (Redundancy)">ED TEMPLATE 9 Confirmation of Consultation (Redundancy)</option>
+                    </optgroup>
+                    <optgroup label="Employment Contract Templates">
+                        <option value="offer_letter">Offer Letter</option>
+                    </optgroup>
+                    <optgroup label="Recruitment & induction Templates">
+
+                    </optgroup>
+                    <optgroup label="Leave (types, policies & processes)">
+
+                    </optgroup>
+                    <optgroup label="Performance Review Templates">
+
+                    </optgroup>
+                    <optgroup label="Policy Templates">
+
+                    </optgroup>
+                    <optgroup label="Ending Employment Templates">
+                    </optgroup>
+                    <optgroup label="Personal Grievance Templates">
+                    </optgroup>
+                    <optgroup label="Covid-19 & Employment Templates">
+
+                    </optgroup>
+                    <optgroup label="Misconduct and disciplinary Templates">
+
+                    </optgroup>
+                </select>
+                <br>
+                <input type="submit" value="Next">
+            </form>
+        </div>
+        
+        <br>
+    </body>
+</html>

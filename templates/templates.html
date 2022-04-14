@@ -1,0 +1,14 @@
+{% extends "rr_template.html" %}
+{% block content %}
+    <form action="#" method="POST">
+        <p>Document Name</p>
+        <input type="text" name="document", required>
+        <br>
+        {% for message in get_flashed_messages()%}
+            <p> {{message}} </p>
+            <input type="text" name="{{message}}">
+        {% endfor %}
+        <br>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+{% endblock %}
