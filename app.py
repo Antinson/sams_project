@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, flash, send_file, redirect, url_for
 import docx
+import tempfile
 import re
 
 app = Flask(__name__)
@@ -52,9 +53,12 @@ def main(template):
                     if p.text.find(i)>=0:
                         p.text=p.text.replace(i, new_dict[i])
 
-            doc.save(new_document)
+            with tempfile.NamedTemporaryFile(delete=False, suffix='.docx') as tmp_file:
+                doc.save(tmp_file.name)
+                tmp_file_path = tmp_file.name
 
-            return send_file(doc, as_attachment=True)
+            return send_file(tmp_file_path, as_attachment=True, download_name=new_document, mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+
 
     return render_template('templates.html')
 
